@@ -1,12 +1,14 @@
+// alertas de presentación
 alert('Agencia de viajes')
 alert('"Estos son nuestros destinos y sus precios"')
 let destinos = 'america= $200.000 \nafrica=$300.000 \neuropa=$400.000 \nasia=$500000 \neeuu=$450.000';
+// mostrar destinos
 alert(destinos)
 
 let opcion;
 let agregarPasajero = "si"; 
 let reservas = 0; 
-
+// ciclo while para carga de datos personales
 while (opcion!=='si' && opcion!=='no'){
     opcion = prompt("Desea realizar una reserva:\n\n si\n no");
     switch(opcion){
@@ -32,6 +34,7 @@ while (opcion!=='si' && opcion!=='no'){
         break
     }
 }
+// lista de precios de destinos
 let america=200000;
 let africa=300000;
 let europa=400000;
@@ -39,7 +42,7 @@ let asia=500000;
 let eeuu=450000;
 let impuesto=1.45;
 let retenciones=0.45;
-
+// funcion para calcular el valor total de o de las reservas
 function valorTotal() {
     let precio;
     let impuestoPais;
@@ -66,13 +69,13 @@ function valorTotal() {
                 break;
     }
 }
-
+// detalle de la reserva
 precioTotal = precio*impuesto*reservas;
             impuestoPais=precio*retenciones*reservas; 
 			alert('Detalles de la reserva'+'\n\nSu destino es: '+destino+'\n\nCantidad de reservas realizadas: '+ reservas+
             '\n\nEl costo total de su reserva es: ' +'$ '+precioTotal+ ' \n\nincluye impuesto pais y dolar solidario por $: '+impuestoPais+ '\n\n Gracias por su confiar en nosotros');
 }
-
+// utilizar funcion valor total
 if (opcion=='si'){
     valorTotal();
 }
